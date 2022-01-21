@@ -12,7 +12,7 @@ nbody.g: nbody.c
 nbodySOA.g: nbodySOA.c
 	gcc -march=native -mavx2 -Ofast -fopt-info-all=nbody.gcc.optrpt $< -o $@ -lm -fopenmp
 clean:
-	rm -Rf *~ nbody.g nbody.i nbodySOA.g : *.optrpt *.dat out.png
+	rm -Rf *~ nbody.g nbodySOA.g : *.optrpt *.dat out.png
 
 
 run: nbody.g   nbodySOA.g
